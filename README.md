@@ -14,9 +14,17 @@
 	* remove Vulcan from under Other Settings > Graphics APIs (keep OpenGLES3)
 		* ARCore does not support Vulcan yet
 	* under Other Settings > Identification > set MINIMUM API LEVEL as 	API LEVEL 24
+
 * include XR Interaction Toolkit
 * select BOTH NEW and Old input managers in 
 	project settings > player => other settings > ACTIVE INPUT HANDLING 
+
+
+## PROBELM WITH BLACK SCREEN / NO BG
+* in the project panel at the bottom: Assets > Settings => select ForwardRenderer
+* in the inspector => Renderer Features > click on Add Renderer Feature
+* select New AR Background Renderer Feature
+
 
 ## SETTING UP PROJECT	
 * in Hierarchy > new > XR > AR Session 
@@ -38,3 +46,17 @@
 	
 * drag Reference Image Library from assets into
 	AR session Origin > AR tracked Image Manager > serialised library	
+	
+## WORKING ON WHAT WE WANT TO APPEAR
+* create an empty game object and populate it, then make it a PREFAB 
+	* connect the prefab 
+	* in AR Session Origin > AR Tracked Image Manager > Tracked Image Prefab
+
+* for text add a canvas and set Render Mode > World Space
+
+* in canvas, drag AR Camera into Event Camera	
+
+## ANIMATIONS AND TIMELINE
+* select ARContent > Window > Sequencing > TIMELINE, hit CREATE and save the director
+* Activation Track to make object appear / disappear at given time
+* to animate the text: canvas > window > animation > animation to get a new timeline
