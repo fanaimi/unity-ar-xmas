@@ -1,5 +1,6 @@
 # unity-ar-xmas
 
+## CONFIGURATION
 * AR foundation 
 	* window > package manager > unity registry (4.1.7)
 * AR Core XR Plugin (for Android - ARKit for iOS)
@@ -13,7 +14,11 @@
 	* remove Vulcan from under Other Settings > Graphics APIs (keep OpenGLES3)
 		* ARCore does not support Vulcan yet
 	* under Other Settings > Identification > set MINIMUM API LEVEL as 	API LEVEL 24
-	
+* include XR Interaction Toolkit
+* select BOTH NEW and Old input managers in 
+	project settings > player => other settings > ACTIVE INPUT HANDLING 
+
+## SETTING UP PROJECT	
 * in Hierarchy > new > XR > AR Session 
 * in Hierarchy > new > XR > AR Session Origin
 	* AR Session Origin has AR CAMERA, so we can delete the original main camera
